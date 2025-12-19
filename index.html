@@ -1,64 +1,100 @@
-<%- include('components/header.html', {title:'Accueil'})%>
+<%- include('components/header.html', { title: 'Accueil' }) %>
+
    <main>
-     
-      <section class="hero">
-        <div class="container content">
-          <h1 class="h1">
-            Le média <br>
-            <span>
-              préféré des Caennais·es
-            </span> !
-          </h1>
-          <p>
-            Rejoins le média <b>numéro 1 de la ville de Caen</b>, avec déjà plus de 220 000 followers 👇 
-          </p>
-          <div class="socials">
-           <a  aria-label="Lien vers linkedin" href="">
-              <span class="icon-linkedin"></span>
-           </a>
-           <a  aria-label="Lien vers linkedin" href="">
-              <span class="icon-linkedin"></span>
-           </a>
-           <a  aria-label="Lien vers linkedin" href="">
-              <span class="icon-linkedin"></span>
-           </a>
-           <a  aria-label="Lien vers linkedin" href="">
-              <span class="icon-linkedin"></span>
-           </a>
-          </div>
-        </div>
+
+      <div class="bg">
+         <div class="gradiant"></div>
+      </div>
+
+      <!-- HERO -->
+      <section id="hero">
+         <div class="container">
+            <div class="h1">
+               <span>Portfolio</span>
+
+               <div class="texts">
+                  <p>
+                     Portfolio crée par <br>
+                     Léo Philippe
+                  </p>
+                  <span>De Leo</span>
+               </div>
+
+               <span>Philippe</span>
+               <span>Dev. Web</span>
+            </div>
+
+            <div class="bottom">
+               <p>Scroller pour découvrir</p>
+               <div class="line">
+                  <span></span>
+               </div>
+            </div>
+         </div>
       </section>
 
-      <section class="discount">
-        <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <div class="content">
-                <p class="highlight">
-                  Maintenant en version digitale
-                </p>
-                <h2 class="h2">
-                  Profite de dizaines de réductions à Caen grâce à la carte Hello Caen !
-                </h2>
-                <p>
-                  Pour <b>seulement 12€</b>, rejoins une communauté grandissante (+ de 3 000 cartes créées) et profite toute l’année de <b>remises</b> chez de nombreux <b>partenaires locaux</b>.
-                </p>
-               <%- include ('components/button.html',{text:'Je crée ma carte', icon:'hand'})%>
-              </div>
+      <!-- QUI -->
+      <section id="qui">
+         <div class="container">
+            <div class="texts">
+               <div class="box">
+                  <p>Qui suis je</p>
+                  <span class="text1">Qui suis je</span>
+                  <span class="text2">Qui suis je</span>
+               </div>
             </div>
-            <div class="col-6">
-              <figure>
-                <img src="/src/assets/img/Carte-Hello-Caen-2025-1024x1365.webp" alt="">
-              </figure>
-            </div>
-          </div>
-        </div>
+         </div>
       </section>
+
+      <!-- PRESENTATION -->
+      <section id="presentation">
+         <div class="container">
+            <p>Etudiant a MyDigitalSchool</p>
+            <p>de Caen,</p>
+            <p>J'evolue dans le</p>
+            <p><span>Developpement</span></p>
+            <p><span>Web.</span></p>
+            <p>Actuellement à la Recherche</p>
+            <p>
+               d'un <span>Stage</span> et d'une
+               <span class="margin">Alternance</span>
+            </p>
+            <p>dans ce Domaine</p>
+
+            <div class="btn">
+               <a href="">En savoir plus</a>
+            </div>
+         </div>
+      </section>
+
+      <!-- MDS -->
+      <section id="MDS">
+         <div class="container">
+            <div class="title">
+               <span>My</span>
+               <span>Digital</span>
+               <span>School</span>
+            </div>
+            <div class="mainText">
+               <span>J'ai</span>
+               <span>rejoins</span>
+               <span>My</span>
+               <span>Digital</span>
+               <span>School</span>
+               <span>en</span>
+               <span>2025</span>
+               <span>pour</span>
+               <span>découvrir</span>
+               <span>les</span>
+               <span>métiers</span>
+               <span>du</span>
+               <span>digital</span>
+            </div>
+
+      </section>
+
+      <section style="height: 200vh; background-color: var(--light);"></section>
 
    </main>
-   <footer>
 
-   </footer>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+   <%- include('components/footer.html') %>
