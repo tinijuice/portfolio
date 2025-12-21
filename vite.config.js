@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path'
-import {ViteEjsPlugin} from "vite-plugin-ejs";
+import { ViteEjsPlugin } from "vite-plugin-ejs";
 import htmlPurge from 'vite-plugin-purgecss';
 import mqpacker from 'mqpacker';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  base: '',
+  base: '/PORTFOLIO/',
   build: {
     rollupOptions: {
       input: {
@@ -55,7 +55,7 @@ export default defineConfig({
             return numB - numA; // du plus grand au plus petit
           }
         })
-        
+
       ]
     }
   },
