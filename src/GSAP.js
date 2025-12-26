@@ -1,4 +1,6 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 
 function textQuiSuiJe() {
@@ -33,7 +35,7 @@ textQuiSuiJe()
 function presentation() {
     const presentation = document.querySelector('#presentation')
     const container = presentation.querySelector('.container')
-    const texts = presentation.querySelectorAll('p:not(.not)')
+    const texts = presentation.querySelectorAll('p')
     const spans = presentation.querySelectorAll('span')
 
     gsap.from(container, {
@@ -81,28 +83,8 @@ function presentation() {
 presentation()
 
 
-function savoirPlus() {
-
-    const btnBox = document.querySelector('#savoirPlus .btn')
-    const btn = btnBox.querySelector('a')
-
-    gsap.to(btn, {
-        scale: "200",
-        x: "300px",
-        color: "var(--red)",
-        backgroundColor: "var(--black)",
-        scrollTrigger: {
-            trigger: btnBox,
-            start: "60% 40%",
-            end: "70% center",
-            scrub: 1,
-            markers: false
-        }
-    });
-}
-
-function mds() {
-    const mds = document.querySelector('#MDS');
+function myDigitalSchool() {
+    const mds = document.querySelector('#MyDigitalSchool');
     const textBox = mds.querySelector('.mainText');
     const texts = mds.querySelectorAll('.mainText span');
 
@@ -128,7 +110,7 @@ function mds() {
         scrollTrigger: {
             trigger: textBox2,
             start: "55% 20%",
-            end: "botom 80%",
+            end: "bottom 80%",
             scrub: 1,
             markers: false
         }
@@ -147,11 +129,11 @@ function mds() {
 
 }
 
-mds();
+myDigitalSchool();
 
 
 function parcours() {
-    
+
     const parcours = document.querySelector('#parcours')
     const box = parcours.querySelector('.box-container')
     const text = parcours.querySelector('.texts')
@@ -171,5 +153,52 @@ function parcours() {
 parcours()
 
 
+function heroProjects() {
+    const heroProjects = document.querySelector('#hero-projects')
+    const title = heroProjects.querySelector('.title')
+    const spans = title.querySelectorAll('span:not(.not, .not2)')
+    const span = title.querySelector("span.not")
+
+    gsap.set(spans, { y: "100%" })
+    gsap.set(span, { y: "100%" })
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: title,
+            start: "top 20%",
+            end: "top top",
+            toggleActions: "play none none none",
+            markers: true,
+        }
+    })
+
+    const duration1 = .4
+    const duration2 = .6
+
+    tl.to(spans, {
+        y: 0,
+        duration: duration1,
+    }, 0)
+
+    tl.from(spans, {
+        left: "50%",
+        x: "-50%",
+        duration: duration2,
+    }, duration1)
 
 
+
+
+    tl.to(span, {
+        y: 0,
+        duration: duration1,
+    }, 0)
+
+    tl.from(span, {
+        left: "50%",
+        x: "-50%",
+        duration: duration2,
+    }, duration1)
+}
+
+heroProjects()

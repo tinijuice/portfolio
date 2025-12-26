@@ -219,7 +219,7 @@
 }
 
 
-#MDS {
+#MyDigitalSchool {
     margin-top: 120px;
 
     .container {
@@ -413,14 +413,12 @@
         gap: 250px;
 
         .title {
-
             p {
                 font-size: 15.5rem;
                 text-transform: uppercase;
                 text-align: center;
                 font-weight: 700;
                 line-height: 1;
-
             }
 
             .highlight {
@@ -460,7 +458,106 @@
                 }
             }
         }
+    }
+}
 
+
+#hero-projects {
+    .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .container {
+        .title {
+            display: block;
+
+            .box {
+                overflow: hidden;
+                height: fit-content;
+                width: 100%;
+
+                span {
+                    font-size: 25vh;
+                    text-transform: uppercase;
+                    color: var(--red);
+                    font-weight: 800;
+                    line-height: 25vh;
+                    display: inline-block;
+                    position: relative;
+                    right: 0 !important;
+                }
+
+                &.box1 span {
+                    left: 250px;
+                }
+
+                &.box4 span {
+                    left: 100px;
+                }
+
+                &.box3 span {
+                    right: 0;
+                }
+
+                &.box5 span {
+                    left: 100px;
+                    right: 100px;
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            gap: 10rem;
+            margin: 150px 0 60px;
+
+            .card {
+                p.categorie {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                    gap: 10px;
+                    color: var(--orange-light);
+                    font-weight: 600;
+                    margin-bottom: 10px;
+
+                    &::before {
+                        content: '';
+                        width: 5px;
+                        height: 5px;
+                        background-color: var(--orange-light);
+                    }
+                }
+
+                p.infos {
+                    font-size: 2.4rem;
+                    color: var(--light);
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    width: fit-content;
+
+                    &::after {
+                        content: '';
+                        height: 2px;
+                        width: 100%;
+                        background-color: var(--light);
+                        display: block;
+                        margin-top: 6px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -469,13 +566,9 @@
 
 
 
-
-
-
-
 @include mq(md) {
 
-    #MDS {
+    #MyDigitalSchool {
         .container {
             .title {
 
@@ -506,6 +599,10 @@
 
 
 @include mq(sm) {
+
+    section {
+        padding: 0 90px;
+    }
 
     #hero {
         .container {
@@ -549,7 +646,7 @@
         }
     }
 
-    #MDS {
+    #MyDigitalSchool {
         .container {
             .title {
 
@@ -578,6 +675,19 @@
                         &:first-child {
                             height: 4.8rem;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    #hero-projects {
+        .container {
+            .title {
+                .box {
+
+                    span {
+                        font-size: 15vh;
                     }
                 }
             }
@@ -641,7 +751,7 @@
         }
     }
 
-    #MDS {
+    #MyDigitalSchool {
         .container {
             .title {
 
@@ -710,7 +820,7 @@
         }
     }
 
-    #MDS {
+    #MyDigitalSchool {
         .container {
 
             .mainText .texts .textbox {
