@@ -1,6 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
+function initGSAP() {
+    textQuiSuiJe()
+    presentation()
+    // myDigitalSchool()
+    parcours()
+    heroProjects()
+}
 
 
 function textQuiSuiJe() {
@@ -129,8 +135,6 @@ function myDigitalSchool() {
 
 }
 
-myDigitalSchool();
-
 
 function parcours() {
 
@@ -149,8 +153,6 @@ function parcours() {
         }
     })
 }
-
-parcours()
 
 
 function heroProjects() {
@@ -201,4 +203,4 @@ function heroProjects() {
     }, duration1)
 }
 
-heroProjects()
+initGSAP()

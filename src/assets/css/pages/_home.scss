@@ -223,18 +223,17 @@
     margin-top: 120px;
 
     .container {
-        height: 100%;
         display: flex;
-        flex-flow: column;
+        flex-direction: column;
         align-items: center;
         gap: 12rem;
+        height: 100%;
 
         .title {
-
             span {
+                display: block;
                 font-weight: 900;
                 font-size: 22vw;
-                display: block;
                 text-align: center;
                 text-transform: uppercase;
                 color: var(--orange);
@@ -272,20 +271,21 @@
 
         .mainText {
             height: 200vh;
+            position: relative;
 
             .texts {
                 height: 100vh;
                 width: 100%;
-                display: flex;
                 position: sticky;
                 top: 0;
                 left: 0;
+                display: flex;
                 justify-content: center;
                 align-items: center;
 
                 .textbox {
                     display: flex;
-                    flex-flow: column;
+                    flex-direction: column;
                     align-items: center;
                     gap: 10px;
 
@@ -305,7 +305,6 @@
                         line-height: 1.2;
                         padding: 0 .1rem;
                         color: var(--white);
-
                         --after-opacity: 1;
 
                         &::after {
@@ -327,7 +326,7 @@
 
         .secondText {
             display: flex;
-            flex-flow: column;
+            flex-direction: column;
             align-items: center;
             gap: 6rem;
             position: relative;
@@ -340,7 +339,6 @@
                 display: flex;
                 gap: 20px;
                 align-items: center;
-                margin-bottom: 12px;
 
                 p {
                     text-transform: uppercase;
@@ -369,9 +367,9 @@
                 color: var(--white);
 
                 span {
-                    height: 7.04rem;
-                    width: 500px;
                     display: inline-block;
+                    width: 500px;
+                    height: 7.04rem;
                 }
             }
 
@@ -389,9 +387,8 @@
 }
 
 
-#parcours {
-    height: 150vh;
-
+.duo {
+    position: relative;
     .bg {
         z-index: -1;
         position: absolute;
@@ -405,6 +402,10 @@
             object-fit: cover;
         }
     }
+}
+
+#parcours {
+    height: 150vh;
 
     .container {
         display: flex;
@@ -431,10 +432,13 @@
             height: 50vh;
 
             .box {
-                height: 300px;
+                height: 200px;
                 width: 350px;
-                background-color: black;
+                background-color: #000000;
                 position: relative;
+                border: 3px solid #ffffff50;
+                border-top: 0;
+                border-right: 0;
 
                 .text-box {
                     overflow: hidden;
@@ -449,6 +453,7 @@
                             font-size: 2.3rem;
                             color: var(--white);
                             text-transform: uppercase;
+                            line-height: 1.5;
 
                             &:not(:last-child) {
                                 margin-bottom: 20px;
@@ -463,54 +468,44 @@
 
 
 #hero-projects {
-    .bg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-
-        img {
-            object-fit: cover;
-        }
-    }
 
     .container {
         .title {
             display: block;
+            height: 100vh;
 
             .box {
                 overflow: hidden;
                 height: fit-content;
                 width: 100%;
+                height: 25vh;
+                position: relative;
 
                 span {
-                    font-size: 25vh;
+                    font-size: 22vh;
                     text-transform: uppercase;
                     color: var(--red);
                     font-weight: 800;
                     line-height: 25vh;
                     display: inline-block;
-                    position: relative;
-                    right: 0 !important;
+                    top: 0;
+                    position: absolute;
+
+                    &:not(.not) {
+                        left: 0;
+                    }
                 }
 
                 &.box1 span {
-                    left: 250px;
+                    left: 18%;
                 }
 
                 &.box4 span {
-                    left: 100px;
+                    left: 10%;
                 }
 
-                &.box3 span {
-                    right: 0;
-                }
-
-                &.box5 span {
-                    left: 100px;
-                    right: 100px;
+                &.box3 span.not {
+                    right: 0px !important;
                 }
             }
         }
@@ -595,14 +590,39 @@
             }
         }
     }
+
+    #hero-projects {
+        .container {
+            .title {
+                height: 70vh;
+
+                .box {
+                    height: 15vh;
+
+                    span {
+                        font-size: 15vh;
+                        line-height: 15vh;
+
+                        &:not(.not) {
+                            left: 0;
+                        }
+                    }
+
+                    &.box1 span {
+                        left: 18%;
+                    }
+
+                    &.box4 span {
+                        left: 10%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
 @include mq(sm) {
-
-    section {
-        padding: 0 90px;
-    }
 
     #hero {
         .container {
@@ -684,10 +704,26 @@
     #hero-projects {
         .container {
             .title {
+                height: 50vh;
+
                 .box {
+                    height: 10vh;
 
                     span {
-                        font-size: 15vh;
+                        font-size: 10vh;
+                        line-height: 10vh;
+
+                        &:not(.not) {
+                            left: 0;
+                        }
+                    }
+
+                    &.box1 span {
+                        left: 18%;
+                    }
+
+                    &.box4 span {
+                        left: 10%;
                     }
                 }
             }
@@ -769,7 +805,34 @@
         }
     }
 
+    #hero-projects {
+        .container {
+            .title {
+                height: 30vh;
 
+                .box {
+                    height: 5vh;
+
+                    span {
+                        font-size: 5vh;
+                        line-height: 5vh;
+
+                        &:not(.not) {
+                            left: 0;
+                        }
+                    }
+
+                    &.box1 span {
+                        left: 18%;
+                    }
+
+                    &.box4 span {
+                        left: 10%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -834,6 +897,35 @@
                 span {
                     font-size: 2.4rem;
                     line-height: 1.2;
+                }
+            }
+        }
+    }
+
+    #hero-projects {
+        .container {
+            .title {
+                height: 20vh;
+
+                .box {
+                    height: 3vh;
+
+                    span {
+                        font-size: 3vh;
+                        line-height: 3vh;
+
+                        &:not(.not) {
+                            left: 0;
+                        }
+                    }
+
+                    &.box1 span {
+                        left: 18%;
+                    }
+
+                    &.box4 span {
+                        left: 10%;
+                    }
                 }
             }
         }

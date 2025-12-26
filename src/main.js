@@ -2,17 +2,19 @@ import './assets/css/style.scss';
 
 fitty('.fitty')
 
+gsap.registerPlugin(ScrollTrigger);
+
 const lenis = new Lenis({
     smooth: true,
-    lerp: .1
+    lerp: 0.05
 });
 
 function raf(time) {
     lenis.raf(time);
-    ScrollTrigger.update();
     requestAnimationFrame(raf);
 }
-
 requestAnimationFrame(raf);
+
+lenis.on('scroll', ScrollTrigger.update);
 
 
