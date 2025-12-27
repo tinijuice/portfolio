@@ -170,7 +170,7 @@ function heroProjects() {
             start: "top 20%",
             end: "top top",
             toggleActions: "play none none none",
-            markers: true,
+            markers: false,
         }
     })
 
