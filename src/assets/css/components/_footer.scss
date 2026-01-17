@@ -1,0 +1,174 @@
+@use 'mixins' as *;
+
+
+footer {
+    padding: 40px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+
+            .text {
+                font-size: 1.5rem;
+                display: flex;
+                flex-flow: column;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                gap: 5px;
+
+                span {
+                    opacity: .3;
+                    margin-left: 2.5rem;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    height: 1.5rem;
+                    gap: 1.5rem;
+
+                    &::before {
+                        content: '';
+                        height: 60%;
+                        aspect-ratio: 1/1;
+                        background-color: var(--white);
+                        display: block;
+                    }
+                }
+
+            }
+
+            .logo {
+                width: 200px;
+            }
+        }
+
+        .right {
+            width: 60%;
+            color: var(--white);
+            position: relative;
+            padding: 15px;
+
+            .corner {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+
+                &:nth-child(1) {
+                    top: 0;
+                    left: -10px;
+                    border-top: 1px solid var(--white);
+                    border-left: 1px solid var(--white);
+                }
+
+                &:nth-child(2) {
+                    top: 0;
+                    right: -10px;
+                    border-top: 1px solid var(--white);
+                    border-right: 1px solid var(--white);
+                }
+
+                &:nth-child(3) {
+                    bottom: 0;
+                    right: -10px;
+                    border-bottom: 1px solid var(--white);
+                    border-right: 1px solid var(--white);
+                }
+
+                &:nth-child(4) {
+                    bottom: 0;
+                    left: -10px;
+                    border-bottom: 1px solid var(--white);
+                    border-left: 1px solid var(--white);
+                }
+            }
+
+            .title {
+                width: 100%;
+                text-align: left;
+                font-weight: 500;
+                font-size: 3rem;
+                line-height: 3.2rem;
+                margin-bottom: 70px;
+            }
+
+            .infos {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                --padding: 15px;
+
+                .box {
+                    width: 100%;
+                    display: flex;
+                    padding: var(--padding) 0;
+                    border-bottom: 1px solid #ffffff50;
+
+                    .text {
+                        flex: 1;
+                    }
+
+                    .content {
+                        margin: 0;
+                        flex: 1;
+
+                        div,
+                        a {
+                            margin: 0;
+
+                            &:last-child {
+                                border-top: 1px solid #ffffff50;
+                            }
+                        }
+
+                        a {
+                            display: block;
+                            color: var(--white);
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        .linkedin,
+                        .mail {
+                            padding-bottom: var(--padding);
+                        }
+
+                        .github,
+                        .phone {
+                            padding-top: var(--padding);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include mq(sm) {
+    header {
+        padding: 1.5rem 5rem;
+        background-color: var(--purple);
+        justify-content: start;
+        align-items: center;
+
+        nav {
+            display: none;
+        }
+
+        .logo {
+            width: 70px;
+        }
+
+        .hbg {
+            display: block;
+        }
+
+
+    }
+
+
+
+}

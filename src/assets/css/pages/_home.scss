@@ -585,12 +585,9 @@
                 background-color: black;
 
                 --index0: calc(var(--index) - 1);
-                --reverse-index: calc(var(--numcards) - var(--index0));
 
                 transform: translateY(calc(60px * var(--index0)));
-                transform-origin: top center;
                 z-index: calc(var(--index0) + 1);
-                transition: transform 0.3s ease-out;
 
                 .thumbnail {
                     width: 50%;
