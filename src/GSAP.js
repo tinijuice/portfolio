@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 function initGSAP() {
     textQuiSuiJe()
     presentation()
-    // myDigitalSchool()
+    myDigitalSchool()
     parcours()
     heroProjects()
 }
@@ -34,8 +34,6 @@ function textQuiSuiJe() {
         .to(text2, { bottom: "0%", duration: 1 }, "<")
         .to(texts, { scale: .1, duration: 1 });
 }
-
-textQuiSuiJe()
 
 
 function presentation() {
@@ -86,8 +84,6 @@ function presentation() {
 
 }
 
-presentation()
-
 
 function myDigitalSchool() {
     const mds = document.querySelector('#MyDigitalSchool');
@@ -108,7 +104,6 @@ function myDigitalSchool() {
 
     const textBox2 = mds.querySelector('.secondText');
     const texts2 = textBox2.querySelectorAll('p');
-    const circle = textBox2.querySelector('.circle');
 
     gsap.to(texts2, {
         color: "var(--orange)",
@@ -121,17 +116,6 @@ function myDigitalSchool() {
             markers: false
         }
     });
-
-    gsap.to(circle, {
-        y: "70%",
-        scrollTrigger: {
-            trigger: textBox2,
-            start: "top 20%",
-            end: "bottom 10%",
-            scrub: 1,
-            markers: false
-        }
-    })
 
 }
 
@@ -148,6 +132,21 @@ function parcours() {
             trigger: box,
             start: "10% 90%",
             end: "bottom 50%",
+            scrub: 1,
+            markers: false
+        }
+    })
+
+
+    const title = parcours.querySelector('.title')
+    const circle = parcours.querySelector('.circle');
+
+    gsap.to(circle, {
+        marginBottom: "300px",
+        scrollTrigger: {
+            trigger: title,
+            start: "-30% bottom",
+            end: "300% top",
             scrub: 1,
             markers: false
         }

@@ -372,16 +372,6 @@
                     height: 7.04rem;
                 }
             }
-
-            .circle {
-                width: 70%;
-                aspect-ratio: 1;
-                background-color: var(--orange);
-                border-radius: 100%;
-                position: absolute;
-                bottom: 0;
-                transform: translateY(90%);
-            }
         }
     }
 }
@@ -413,20 +403,35 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-        gap: 250px;
+        gap: 450px;
 
         .title {
+            position: relative;
+
+            .circle {
+                width: 100%;
+                aspect-ratio: 1;
+                background-color: var(--orange);
+                border-radius: 100%;
+                position: absolute;
+                bottom: -20%;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+
             p {
-                font-size: 15.5rem;
+                font-size: 12.5rem;
                 text-transform: uppercase;
                 text-align: center;
                 font-weight: 700;
                 line-height: 1;
-            }
 
-            .highlight {
-                color: var(--orange);
-                font-family: 'Brier';
+                .highlight {
+                    color: var(--orange);
+                    font-family: 'Brier';
+                    mix-blend-mode: difference;
+                }
             }
         }
 
@@ -556,6 +561,41 @@
         }
     }
 }
+
+
+#projects {
+
+    .container {
+
+        .projects-list {
+
+            .project {
+                padding: 20px 0;
+                border-top: 1px solid var(--white);
+                border-bottom: 1px solid var(--white);
+                display: flex;
+                height: 425px;
+                gap: 15px;
+
+                &>* {
+                    flex: 1;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .thumbnail{
+                    width: 100%;
+
+                    .image{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
@@ -702,6 +742,23 @@
         }
     }
 
+
+    #parcours {
+
+        .container {
+
+            .title {
+
+                p {
+                    font-size: 9.5rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+
+
     #hero-projects {
         .container {
             .title {
@@ -765,7 +822,6 @@
     }
 
     #presentation {
-        content-visibility: visible;
 
         .container {
             display: flex;
@@ -803,6 +859,25 @@
         }
     }
 
+
+    #parcours {
+        .container {
+
+            .title {
+                .circle {
+                    width: 100%;
+                    left: 50%;
+                    transform: translate(-50%, 80%);
+                }
+
+                p {
+                    font-size: 7rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
     #hero-projects {
         .container {
             .title {
@@ -824,6 +899,14 @@
                         line-height: 15vh;
                     }
                 }
+            }
+
+            .bottom {
+                display: flex;
+                flex-flow: column;
+                align-items: start;
+                gap: 3rem;
+
             }
         }
     }
@@ -853,7 +936,6 @@
     }
 
     #presentation {
-        content-visibility: visible;
 
         .container {
             display: flex;
@@ -896,6 +978,20 @@
         }
     }
 
+    #parcours {
+
+        .container {
+
+            .title {
+
+                p {
+                    font-size: 4rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
     #hero-projects {
         .container {
             .title {
@@ -919,50 +1015,6 @@
                 }
             }
 
-            .bottom {
-                display: flex;
-                flex-flow: column;
-                align-items: start;
-                gap: 3rem;
-                margin: 150px 0 60px;
-
-                .card {
-                    p.categorie {
-                        display: flex;
-                        align-items: center;
-                        font-size: 1.6rem;
-                        text-transform: uppercase;
-                        gap: 10px;
-                        color: var(--orange-light);
-                        font-weight: 600;
-                        margin-bottom: 10px;
-
-                        &::before {
-                            content: '';
-                            width: 5px;
-                            height: 5px;
-                            background-color: var(--orange-light);
-                        }
-                    }
-
-                    p.infos {
-                        font-size: 2.4rem;
-                        color: var(--light);
-                        font-weight: 600;
-                        margin-bottom: 5px;
-                        width: fit-content;
-
-                        &::after {
-                            content: '';
-                            height: 2px;
-                            width: 100%;
-                            background-color: var(--light);
-                            display: block;
-                            margin-top: 6px;
-                        }
-                    }
-                }
-            }
         }
     }
 }
