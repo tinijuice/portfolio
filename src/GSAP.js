@@ -202,4 +202,12 @@ function heroProjects() {
     }, duration1)
 }
 
+
+
+
+
+
+
+
+
 initGSAP()

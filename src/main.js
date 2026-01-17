@@ -24,15 +24,24 @@ lenis.on('scroll', ScrollTrigger.update);
 async function setProjects() {
 
     const display = document.querySelector('.projects-list')
-    
-    projects.forEach(project => {
-        
+    display.style = '--numcards: ' + projects.length
+
+    projects.forEach((project, index) => {
+
         const template = document.getElementById('projectTemplate').content.cloneNode(true)
 
-        template.querySelector('.title').textContent = project.title
-        template.querySelector('.description').textContent = project.description
-        template.querySelector('.type').textContent = project.type
+        template.querySelector('.title .text').textContent = project.title
+        template.querySelector('.description p').textContent = project.description
+        template.querySelector('.type span').textContent = project.type
+        template.querySelector('.technology span').textContent = project.technology
 
+        template.querySelector('.thumbnail img').src = project.thumbnail
+
+        template.querySelector('a').href = project.link
+
+        template.querySelector('.project').style = '--index: ' + (Number(index) + 1)
+
+        
         fragment.append(template)
     });
 
