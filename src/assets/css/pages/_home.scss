@@ -389,6 +389,7 @@
 
 .duo {
     position: relative;
+
     .bg {
         z-index: -1;
         position: absolute;
@@ -406,6 +407,7 @@
 
 #parcours {
     height: 150vh;
+    margin: 200px 0;
 
     .container {
         display: flex;
@@ -436,7 +438,6 @@
                 width: 350px;
                 background-color: #000000;
                 position: relative;
-                border: 3px solid #ffffff50;
                 border-top: 0;
                 border-right: 0;
 
@@ -704,26 +705,23 @@
     #hero-projects {
         .container {
             .title {
-                height: 50vh;
+                display: block;
+                height: 100vh;
 
                 .box {
-                    height: 10vh;
+                    overflow: hidden;
+                    height: fit-content;
+                    width: 100%;
+                    height: 25vh;
+                    position: relative;
 
                     span {
-                        font-size: 10vh;
-                        line-height: 10vh;
-
-                        &:not(.not) {
-                            left: 0;
-                        }
-                    }
-
-                    &.box1 span {
-                        left: 18%;
-                    }
-
-                    &.box4 span {
-                        left: 10%;
+                        font-size: 22vh;
+                        text-transform: uppercase;
+                        color: var(--red);
+                        font-weight: 800;
+                        line-height: 25vh;
+                        position: static;
                     }
                 }
             }
@@ -808,26 +806,22 @@
     #hero-projects {
         .container {
             .title {
-                height: 30vh;
+                display: block;
+                height: 60vh;
 
                 .box {
-                    height: 5vh;
+                    overflow: hidden;
+                    height: fit-content;
+                    width: 100%;
+                    height: 15vh;
+                    position: relative;
 
                     span {
-                        font-size: 5vh;
-                        line-height: 5vh;
-
-                        &:not(.not) {
-                            left: 0;
-                        }
-                    }
-
-                    &.box1 span {
-                        left: 18%;
-                    }
-
-                    &.box4 span {
-                        left: 10%;
+                        font-size: 15vh;
+                        text-transform: uppercase;
+                        color: var(--red);
+                        font-weight: 800;
+                        line-height: 15vh;
                     }
                 }
             }
@@ -905,26 +899,67 @@
     #hero-projects {
         .container {
             .title {
-                height: 20vh;
+                display: block;
+                height: 40vh;
 
                 .box {
-                    height: 3vh;
+                    overflow: hidden;
+                    height: fit-content;
+                    width: 100%;
+                    height: 10vh;
+                    position: relative;
 
                     span {
-                        font-size: 3vh;
-                        line-height: 3vh;
+                        font-size: 10vh;
+                        text-transform: uppercase;
+                        color: var(--red);
+                        font-weight: 800;
+                        line-height: 10vh;
+                    }
+                }
+            }
 
-                        &:not(.not) {
-                            left: 0;
+            .bottom {
+                display: flex;
+                flex-flow: column;
+                align-items: start;
+                gap: 3rem;
+                margin: 150px 0 60px;
+
+                .card {
+                    p.categorie {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        gap: 10px;
+                        color: var(--orange-light);
+                        font-weight: 600;
+                        margin-bottom: 10px;
+
+                        &::before {
+                            content: '';
+                            width: 5px;
+                            height: 5px;
+                            background-color: var(--orange-light);
                         }
                     }
 
-                    &.box1 span {
-                        left: 18%;
-                    }
+                    p.infos {
+                        font-size: 2.4rem;
+                        color: var(--light);
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        width: fit-content;
 
-                    &.box4 span {
-                        left: 10%;
+                        &::after {
+                            content: '';
+                            height: 2px;
+                            width: 100%;
+                            background-color: var(--light);
+                            display: block;
+                            margin-top: 6px;
+                        }
                     }
                 }
             }
