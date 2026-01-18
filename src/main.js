@@ -102,9 +102,9 @@ setInterval(() => {
 function callback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            glitchedText(entry.target, 5, 50, 150);
-            entry.target.classList.add('isView');
-            observer.unobserve(entry.target); t
+            glitchedText(entry.target, 5, 50, 150)
+            entry.target.classList.add('isView')
+            observer.unobserve(entry.target)
         }
     });
 }
