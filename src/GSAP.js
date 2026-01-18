@@ -82,6 +82,22 @@ function presentation() {
         });
     });
 
+    const line = presentation.querySelector('.line')
+
+    gsap.to(line, {
+        width: "100%",
+        x: "100%",
+        scrollTrigger: {
+            trigger: line,
+            start: "center 90%",
+            end: "center 10%",
+            scrub: 1,
+            markers: false
+        }
+    });
+
+
+
 }
 
 

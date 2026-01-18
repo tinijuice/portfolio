@@ -161,7 +161,7 @@
 
 
 #presentation {
-    content-visibility: visible;
+
 
     .container {
         display: flex;
@@ -169,6 +169,18 @@
         align-items: center;
         position: relative;
         transform: translateY(-130px);
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 100px;
+
+        .line{
+            width: 0;
+            height: 1px;
+            background-color: var(--white);
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+        }
 
         p {
             color: var(--light);
@@ -205,14 +217,30 @@
 
             a {
                 font-size: 3rem;
-                color: var(--light);
-                background-color: var(--red);
-                padding: 12px 24px;
+                color: var(--white);
                 border-radius: 100px;
                 display: inline-block;
                 width: fit-content;
-                font-weight: bold;
+                font-weight: 400;
                 text-transform: uppercase;
+                position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    width: 0;
+                    display: block;
+                    height: 1px;
+                    background-color: var(--white);
+                    transition: .2s;
+                    will-change: width;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
             }
         }
     }
