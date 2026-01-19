@@ -34,7 +34,7 @@ export default defineConfig({
         },
       },
     },
-    outDir: 'dist',
+    outDir: 'docs',
     emptyOutDir: true,
   },
   css: {
