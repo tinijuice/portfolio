@@ -6,7 +6,7 @@ import mqpacker from 'mqpacker';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  base: '/',
+  base: '/portfolio/',
   build: {
     rollupOptions: {
       input: {
