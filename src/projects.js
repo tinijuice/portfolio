@@ -7,7 +7,7 @@ export const projects = [
         "type": "Developpement Web",
         "technology": "Javascript & PHP",
         "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s",
-        "link": "/rave"
+        "link": "/portfolio/rave"
     },
     {
         "title": "Rave",
@@ -15,7 +15,7 @@ export const projects = [
         "type": "Developpement Web",
         "technology": "Javascript & PHP",
         "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s",
-        "link": "/rave"
+        "link": "/portfolio/rave"
     },
     {
         "title": "Rave",
@@ -23,6 +23,6 @@ export const projects = [
         "type": "Developpement Web",
         "technology": "Javascript & PHP",
         "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s",
-        "link": "/rave"
+        "link": "/portfolio/rave"
     },
 ]

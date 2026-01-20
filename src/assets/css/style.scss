@@ -20,8 +20,8 @@
 
 :root {
     --white: #eaeaea;
-    ;
     --black: #000000;
+
     --orange: #FF4400;
     --orange-light: #FFB261;
     --red: #EF5143;
@@ -57,6 +57,18 @@
 @font-face {
     font-family: 'Tempting';
     src: url('../fonts/Tempting.ttf');
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Ppmondwest';
+    src: url('../fonts/Ppmondwest.otf');
+    display: swap;
+}
+
+@font-face {
+    font-family: 'GoogleSansCode';
+    src: url('../fonts/GoogleSansCode.ttf');
     display: swap;
 }
 

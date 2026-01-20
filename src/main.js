@@ -95,16 +95,20 @@ function glitchedText(element, maxStep = 3, delay = 100, duration = 150) {
 
 }
 
+let maxStep = 2
+let delay = 50
+let duration = 100
+
 setInterval(() => {
 
-    document.querySelectorAll('.glitched-text').forEach(el => glitchedText(el, 5, 50, 100));
+    document.querySelectorAll('.glitched-text').forEach(el => glitchedText(el, maxStep, delay, duration));
 }, 6000);
 
 
 function callback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            glitchedText(entry.target, 5, 50, 150)
+            glitchedText(entry.target, maxStep, delay, duration)
             entry.target.classList.add('isView')
             observer.unobserve(entry.target)
         }
