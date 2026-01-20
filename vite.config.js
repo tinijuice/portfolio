@@ -6,11 +6,12 @@ import mqpacker from 'mqpacker';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  base: '/portfolio/',
+  base: '/',
   build: {
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'index.html')
+        rave: resolve(__dirname, 'index.html'),
+        index: resolve(__dirname, 'rave.html')
       },
       output: {
         entryFileNames: 'assets/js/[name]-[hash].js',

@@ -125,47 +125,8 @@ document.querySelectorAll(".glitched-text:not(.isView)").forEach(el => {
 
 
 
-// function decryptWordSequential(element, changes = 3, intervalTime = 100, delayBetween = 150) {
-//     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-//     const original = element.textContent;
-//     if (!original) return;
-
-//     const chars = original.split(""); // lettres finales
-
-//     // On initialise le mot en crypté
-//     element.textContent = chars.map(() => letters[Math.floor(Math.random() * letters.length)]).join("");
-
-//     // On anime chaque lettre une par une
-//     chars.forEach((finalChar, index) => {
-//         let step = 0;
-
-//         setTimeout(() => {
-//             const interval = setInterval(() => {
-//                 if (step >= changes) {
-//                     clearInterval(interval);
-//                     // on met la vraie lettre finale
-//                     element.textContent = chars.map((c, i) => i <= index ? c : element.textContent[i]).join("");
-//                     return;
-//                 }
-
-//                 // lettre en cours devient aléatoire, les autres restent
-//                 element.textContent = chars.map((c, i) => {
-//                     if (i === index) return letters[Math.floor(Math.random() * letters.length)];
-//                     return element.textContent[i]; // les lettres précédentes restent fixées
-//                 }).join("");
-
-//                 step++;
-//             }, intervalTime);
-//         }, index * delayBetween);
-//     });
-// }
 
 
 
-// const title = document.querySelector(".glitched-text");
-
-// setTimeout(() => {
-//     decryptWordSequential(title, 5, 50, 50);
-// }, 1000);
 
 
