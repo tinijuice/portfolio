@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
 function initGSAP() {
     textQuiSuiJe()
     presentation()
@@ -10,6 +11,9 @@ function initGSAP() {
 
 
 function textQuiSuiJe() {
+
+    if(!document.querySelector('#qui')) return
+    
     const text1 = document.querySelector('#qui .text1');
     const text2 = document.querySelector('#qui .text2');
     const textMain = document.querySelector('#qui p');
@@ -38,6 +42,9 @@ function textQuiSuiJe() {
 
 function presentation() {
     const presentation = document.querySelector('#presentation')
+
+    if(!presentation) return
+
     const container = presentation.querySelector('.container')
     const texts = presentation.querySelectorAll('p')
     const spans = presentation.querySelectorAll('span')
@@ -103,6 +110,9 @@ function presentation() {
 
 function myDigitalSchool() {
     const mds = document.querySelector('#MyDigitalSchool');
+
+    if(!mds) return
+
     const textBox = mds.querySelector('.mainText');
     const texts = mds.querySelectorAll('.mainText span');
 
@@ -139,6 +149,9 @@ function myDigitalSchool() {
 function parcours() {
 
     const parcours = document.querySelector('#parcours')
+
+    if(!parcours) return
+
     const box = parcours.querySelector('.box-container')
     const text = parcours.querySelector('.texts')
 
@@ -172,6 +185,9 @@ function parcours() {
 
 function heroProjects() {
     const heroProjects = document.querySelector('#hero-projects')
+
+    if(!heroProjects) return
+
     const title = heroProjects.querySelector('.title')
     const spans = title.querySelectorAll('span:not(.not, .not2)')
     const span = title.querySelector("span.not")
@@ -217,11 +233,6 @@ function heroProjects() {
         duration: duration2,
     }, duration1)
 }
-
-
-
-
-
 
 
 

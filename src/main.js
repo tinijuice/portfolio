@@ -24,6 +24,8 @@ lenis.on('scroll', ScrollTrigger.update);
 async function setProjects() {
 
     const display = document.querySelector('.projects-list')
+
+    if(!display) return
     display.style = '--numcards: ' + projects.length
 
     projects.forEach((project, index) => {

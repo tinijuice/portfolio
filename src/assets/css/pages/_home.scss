@@ -43,334 +43,52 @@
     }
 }
 
-#hero {
-    height: 100vh;
-    padding: 0 60px;
+main#home {
 
-    .container {
-        height: 100%;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        padding: 15px 0;
+    #hero {
+        height: 100vh;
+        padding: 0 60px;
 
-        .h1 {
+        .container {
+            height: 100%;
             display: flex;
             flex-flow: column;
+            justify-content: space-between;
+            padding: 15px 0;
 
-            span {
-                text-transform: uppercase;
+            .h1 {
                 display: flex;
-                align-items: center;
-                line-height: 20.5vh;
-            }
-
-            .texts {
-                text-transform: normal;
-                display: flex;
-                gap: 10px;
-
-                p {
-                    margin: 8.5px 0 0 7px;
-                    font-size: 1.6rem;
-                    color: var(--light);
-                }
-            }
-        }
-
-        .bottom {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            margin-bottom: 12px;
-
-            p {
-                text-transform: uppercase;
-                color: var(--light);
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .line {
-                width: 50px;
-                overflow: hidden;
+                flex-flow: column;
 
                 span {
-                    display: block;
-                    height: 1px;
-                    background-color: var(--light);
-                    animation: line 2s ease infinite forwards;
-                }
-            }
-        }
-    }
-}
-
-
-#qui {
-    height: 250vh;
-
-    .container {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        flex-flow: column;
-
-        .texts {
-            margin: 300px 0 0 0;
-            text-transform: uppercase;
-            position: sticky;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 99;
-            height: fit-content;
-
-            .box {
-                line-height: .75;
-                font-size: 20vw;
-                font-weight: 800;
-                color: var(--orange-light);
-                white-space: nowrap;
-
-                p {
-                    transform: translateX(-110%);
-                    background-color: black;
-                }
-
-                span {
-                    display: block;
-                    position: absolute;
-
-                    &:nth-child(2) {
-                        bottom: 100%;
-                        transform: translateX(110%);
-                        z-index: -999 !important;
-                    }
-
-                    &:last-child {
-                        z-index: -999 !important;
-                        transform: translateX(110%);
-                        bottom: -100%;
-                    }
-                }
-            }
-
-        }
-    }
-}
-
-
-#presentation {
-
-
-    .container {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        position: relative;
-        transform: translateY(-130px);
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 100px;
-
-        .line{
-            width: 0;
-            height: 1px;
-            background-color: var(--white);
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-        }
-
-        p {
-            color: var(--light);
-            font-size: 14.7rem;
-            text-align: center;
-            font-weight: 700;
-            line-height: 88%;
-            letter-spacing: -5.4px;
-
-            span {
-                position: relative;
-                display: inline-block;
-                --after-width: 0%;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: var(--after-width);
-                    height: 100%;
-                    background-color: var(--red);
-                    z-index: -1;
-                }
-
-                &.margin {
-                    margin-top: 22px;
-                }
-            }
-        }
-
-        .btn {
-            margin-top: 200px;
-
-            a {
-                font-size: 3rem;
-                color: var(--white);
-                border-radius: 100px;
-                display: inline-block;
-                width: fit-content;
-                font-weight: 400;
-                text-transform: uppercase;
-                position: relative;
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    bottom: -10px;
-                    left: 0;
-                    width: 0;
-                    display: block;
-                    height: 1px;
-                    background-color: var(--white);
-                    transition: .2s;
-                    will-change: width;
-                }
-
-                &:hover::after{
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-
-
-#MyDigitalSchool {
-    margin-top: 120px;
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12rem;
-        height: 100%;
-
-        .title {
-            span {
-                display: block;
-                font-weight: 900;
-                font-size: 22vw;
-                text-align: center;
-                text-transform: uppercase;
-                color: var(--orange);
-                line-height: 73%;
-                font-family: 'Thunder';
-                position: relative;
-
-                &::after {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    font-size: 4rem;
-                    color: white;
-                    z-index: 1;
-                    line-height: normal;
-                    transform: translate(-50%, -90%);
-                    font-family: 'Tempting';
-                    text-transform: none;
-                    font-weight: normal;
-                }
-
-                &:first-child::after {
-                    content: 'Bachelor';
-                }
-
-                &:nth-child(2)::after {
-                    content: 'Cycle Web';
-                }
-
-                &:last-child::after {
-                    content: 'Multimedia';
-                }
-            }
-        }
-
-        .mainText {
-            height: 200vh;
-            position: relative;
-
-            .texts {
-                height: 100vh;
-                width: 100%;
-                position: sticky;
-                top: 0;
-                left: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                .textbox {
+                    text-transform: uppercase;
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
+                    line-height: 20.5vh;
+                }
+
+                .texts {
+                    text-transform: normal;
+                    display: flex;
                     gap: 10px;
 
-                    div {
-                        display: flex;
-                        gap: 10px;
-
-                        &:last-child span:last-child {
-                            color: var(--orange);
-                        }
-                    }
-
-                    span {
-                        font-size: 6.5rem;
-                        font-weight: 500;
-                        position: relative;
-                        line-height: 1.2;
-                        padding: 0 .1rem;
-                        color: var(--white);
-                        --after-opacity: 1;
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background-color: #262626;
-                            z-index: 1;
-                            opacity: var(--after-opacity);
-                            display: block;
-                        }
+                    p {
+                        margin: 8.5px 0 0 7px;
+                        font-size: 1.6rem;
+                        color: var(--light);
                     }
                 }
             }
-        }
 
-        .secondText {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6rem;
-            position: relative;
-            padding-bottom: 12vw;
-
-            .about {
-                position: absolute;
-                top: 20px;
-                left: 0;
+            .bottom {
                 display: flex;
                 gap: 20px;
                 align-items: center;
+                margin-bottom: 12px;
 
                 p {
                     text-transform: uppercase;
-                    color: var(--white);
+                    color: var(--light);
                     font-size: 16px;
                     font-weight: 400;
                 }
@@ -382,457 +100,401 @@
                     span {
                         display: block;
                         height: 1px;
-                        background-color: var(--white);
+                        background-color: var(--light);
                         animation: line 2s ease infinite forwards;
                     }
                 }
             }
-
-            p {
-                font-size: 6.4rem;
-                font-weight: 500;
-                line-height: 1.2;
-                color: var(--white);
-
-                span {
-                    display: inline-block;
-                    width: 500px;
-                    height: 7.04rem;
-                }
-            }
         }
     }
-}
 
 
-.duo {
-    position: relative;
+    #qui {
+        height: 250vh;
 
-    .bg {
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: .05;
-
-        img {
-            object-fit: cover;
-        }
-    }
-}
-
-#parcours {
-    height: 150vh;
-    margin: 200px 0;
-
-    .container {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        gap: 450px;
-
-        .title {
-            position: relative;
-
-            .circle {
-                width: 100%;
-                aspect-ratio: 1;
-                background-color: var(--orange);
-                border-radius: 100%;
-                position: absolute;
-                bottom: -20%;
-                left: 50%;
-                z-index: -1;
-                transform: translateX(-50%);
-            }
-
-            p {
-                font-size: 12.5rem;
-                text-transform: uppercase;
-                text-align: center;
-                font-weight: 700;
-                line-height: 1;
-
-                .highlight {
-                    color: var(--orange);
-                    font-family: 'Brier';
-                    mix-blend-mode: difference;
-                }
-            }
-        }
-
-        .box-container {
-            height: 50vh;
-
-            .box {
-                height: 200px;
-                width: 350px;
-                background-color: #000000;
-                position: relative;
-                border-top: 0;
-                border-right: 0;
-
-                .text-box {
-                    overflow: hidden;
-                    position: absolute;
-                    bottom: 0px;
-                    left: 0;
-
-                    .texts {
-                        transform: translateY(57%);
-
-                        p {
-                            font-size: 2.3rem;
-                            color: var(--white);
-                            text-transform: uppercase;
-                            line-height: 1.5;
-
-                            &:not(:last-child) {
-                                margin-bottom: 20px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-#hero-projects {
-    padding-bottom: 200px;
-
-    .container {
-        .title {
-            display: block;
-            height: 100vh;
-
-            .box {
-                overflow: hidden;
-                height: fit-content;
-                width: 100%;
-                height: 25vh;
-                position: relative;
-
-                span {
-                    font-size: 22vh;
-                    text-transform: uppercase;
-                    color: var(--red);
-                    font-weight: 800;
-                    line-height: 25vh;
-                    display: inline-block;
-                    top: 0;
-                    position: absolute;
-
-                    &:not(.not) {
-                        left: 0;
-                    }
-                }
-
-                &.box1 span {
-                    left: 18%;
-                }
-
-                &.box4 span {
-                    left: 10%;
-                }
-
-                &.box3 span.not {
-                    right: 0px !important;
-                }
-            }
-        }
-
-        .bottom {
+        .container {
             display: flex;
+            height: 100%;
             align-items: center;
-            gap: 10rem;
-            margin: 150px 0 60px;
+            flex-flow: column;
 
-            .card {
-                p.categorie {
-                    display: flex;
-                    align-items: center;
-                    font-size: 1.6rem;
-                    text-transform: uppercase;
-                    gap: 10px;
-                    color: var(--orange-light);
-                    font-weight: 600;
-                    margin-bottom: 10px;
-
-                    &::before {
-                        content: '';
-                        width: 5px;
-                        height: 5px;
-                        background-color: var(--orange-light);
-                    }
-                }
-
-                p.infos {
-                    font-size: 2.4rem;
-                    color: var(--light);
-                    font-weight: 600;
-                    margin-bottom: 5px;
-                    width: fit-content;
-
-                    &::after {
-                        content: '';
-                        height: 2px;
-                        width: 100%;
-                        background-color: var(--light);
-                        display: block;
-                        margin-top: 6px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-#projects {
-    padding-bottom: 400px;
-    .container {
-        max-width: 1450px;
-        margin-inline: auto;
-        position: relative;
-
-        .projects-list {
-            position: relative;
-
-            .project {
+            .texts {
+                margin: 300px 0 0 0;
+                text-transform: uppercase;
                 position: sticky;
-                display: flex;
-                gap: 15px;
-                padding: 25px 0;
-                border-top: 1px solid var(--white);
-                border-bottom: 1px solid var(--white);
-                background-color: black;
-
-                --index0: calc(var(--index) - 1);
-
-                top: calc(60px * var(--index0));
-                z-index: calc(var(--index0) + 1);
-
-                .thumbnail {
-                    width: 50%;
-                    flex-shrink: 0;
-
-                    .image {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                .texts-block {
-                    display: flex;
-                    flex-flow: column;
-                    justify-content: space-between;
-                    font-size: 1.8rem;
-                    line-height: 2.7rem;
-
-                    .title {
-                        text-transform: uppercase;
-                        display: flex;
-                        gap: 15px;
-                        align-items: center;
-                        font-size: 1.5rem;
-                        line-height: 1.5rem;
-                        width: 100%;
-                        position: relative;
-
-                        &::before {
-                            content: '';
-                            height: 60%;
-                            aspect-ratio: 1/1;
-                            background-color: var(--white);
-                            display: block;
-                        }
-
-                        a{
-                            position: absolute;
-                            right: 0;
-                            transform: rotate(-45deg);
-                        }
-                    }
-
-                    .bottom {
-                        &>*:not(:last-child) {
-                            border-bottom: 1px solid grey;
-                            display: block;
-                        }
-
-                        .description {
-                            padding-bottom: 20px;
-
-                            p {
-                                width: 90%;
-                            }
-                        }
-
-                        .type,
-                        .technology {
-                            padding: 12px 0;
-                            display: flex;
-                            justify-content: space-between;
-                            text-transform: uppercase;
-                            font-size: 1.5rem;
-                            line-height: 1.5rem;
-
-                            span {
-                                width: 40%;
-                                text-align: left;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-@include mq(md) {
-
-    #MyDigitalSchool {
-        .container {
-            .title {
-
-                span {
-                    font-size: 30vw;
-                }
-            }
-
-            .secondText {
-
-                p {
-                    font-size: 4rem;
-                    line-height: 120%;
-
-                    span {
-                        width: 300px;
-                        height: 1px;
-
-                        &:first-child {
-                            height: 4.8rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    #hero-projects {
-        .container {
-            .title {
-                height: 70vh;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 99;
+                height: fit-content;
 
                 .box {
-                    height: 15vh;
-
-                    span {
-                        font-size: 15vh;
-                        line-height: 15vh;
-
-                        &:not(.not) {
-                            left: 0;
-                        }
-                    }
-
-                    &.box1 span {
-                        left: 18%;
-                    }
-
-                    &.box4 span {
-                        left: 10%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-@include mq(sm) {
-
-    #hero {
-        .container {
-            padding-top: 100px;
-
-            .h1 {
-
-                span {
-                    font-size: 17vh;
-                    line-height: 15vh;
-                }
-
-                .texts {
+                    line-height: .75;
+                    font-size: 20vw;
+                    font-weight: 800;
+                    color: var(--orange-light);
+                    white-space: nowrap;
 
                     p {
-                        font-size: 1.2rem;
+                        transform: translateX(-110%);
+                        background-color: black;
+                    }
+
+                    span {
+                        display: block;
+                        position: absolute;
+
+                        &:nth-child(2) {
+                            bottom: 100%;
+                            transform: translateX(110%);
+                            z-index: -999 !important;
+                        }
+
+                        &:last-child {
+                            z-index: -999 !important;
+                            transform: translateX(110%);
+                            bottom: -100%;
+                        }
                     }
                 }
+
             }
         }
     }
 
+
     #presentation {
-        content-visibility: visible;
+
 
         .container {
             display: flex;
             flex-flow: column;
             align-items: center;
             position: relative;
-            transform: translateY(-60px) !important;
+            transform: translateY(-130px);
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100px;
+
+            .line {
+                width: 0;
+                height: 1px;
+                background-color: var(--white);
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+            }
 
             p {
                 color: var(--light);
-                font-size: 10rem;
+                font-size: 14.7rem;
                 text-align: center;
                 font-weight: 700;
                 line-height: 88%;
                 letter-spacing: -5.4px;
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    --after-width: 0%;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: var(--after-width);
+                        height: 100%;
+                        background-color: var(--red);
+                        z-index: -1;
+                    }
+
+                    &.margin {
+                        margin-top: 22px;
+                    }
+                }
+            }
+
+            .btn {
+                margin-top: 200px;
+
+                a {
+                    font-size: 3rem;
+                    color: var(--white);
+                    border-radius: 100px;
+                    display: inline-block;
+                    width: fit-content;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        width: 0;
+                        display: block;
+                        height: 1px;
+                        background-color: var(--white);
+                        transition: .2s;
+                        will-change: width;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
 
-    #MyDigitalSchool {
-        .container {
-            .title {
 
+    #MyDigitalSchool {
+        margin-top: 120px;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12rem;
+            height: 100%;
+
+            .title {
                 span {
-                    font-size: 38vw;
+                    display: block;
+                    font-weight: 900;
+                    font-size: 22vw;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: var(--orange);
+                    line-height: 73%;
+                    font-family: 'Thunder';
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        font-size: 4rem;
+                        color: white;
+                        z-index: 1;
+                        line-height: normal;
+                        transform: translate(-50%, -90%);
+                        font-family: 'Tempting';
+                        text-transform: none;
+                        font-weight: normal;
+                    }
+
+                    &:first-child::after {
+                        content: 'Bachelor';
+                    }
+
+                    &:nth-child(2)::after {
+                        content: 'Cycle Web';
+                    }
+
+                    &:last-child::after {
+                        content: 'Multimedia';
+                    }
                 }
             }
 
-            .mainText .texts .textbox {
+            .mainText {
+                height: 200vh;
+                position: relative;
 
-                span {
-                    font-size: 5.8rem;
+                .texts {
+                    height: 100vh;
+                    width: 100%;
+                    position: sticky;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .textbox {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+
+                        div {
+                            display: flex;
+                            gap: 10px;
+
+                            &:last-child span:last-child {
+                                color: var(--orange);
+                            }
+                        }
+
+                        span {
+                            font-size: 6.5rem;
+                            font-weight: 500;
+                            position: relative;
+                            line-height: 1.2;
+                            padding: 0 .1rem;
+                            color: var(--white);
+                            --after-opacity: 1;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: #262626;
+                                z-index: 1;
+                                opacity: var(--after-opacity);
+                                display: block;
+                            }
+                        }
+                    }
                 }
             }
 
             .secondText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 6rem;
+                position: relative;
+                padding-bottom: 12vw;
+
+                .about {
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    p {
+                        text-transform: uppercase;
+                        color: var(--white);
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+
+                    .line {
+                        width: 50px;
+                        overflow: hidden;
+
+                        span {
+                            display: block;
+                            height: 1px;
+                            background-color: var(--white);
+                            animation: line 2s ease infinite forwards;
+                        }
+                    }
+                }
 
                 p {
-                    font-size: 3rem;
-                    line-height: 120%;
+                    font-size: 6.4rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    color: var(--white);
 
                     span {
-                        width: 200px;
-                        height: 1px;
+                        display: inline-block;
+                        width: 500px;
+                        height: 7.04rem;
+                    }
+                }
+            }
+        }
+    }
 
-                        &:first-child {
-                            height: 4.8rem;
+
+    .duo {
+        position: relative;
+
+        .bg {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: .05;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    #parcours {
+        height: 150vh;
+        margin: 200px 0;
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 450px;
+
+            .title {
+                position: relative;
+
+                .circle {
+                    width: 100%;
+                    aspect-ratio: 1;
+                    background-color: var(--orange);
+                    border-radius: 100%;
+                    position: absolute;
+                    bottom: -20%;
+                    left: 50%;
+                    z-index: -1;
+                    transform: translateX(-50%);
+                }
+
+                p {
+                    font-size: 12.5rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 1;
+
+                    .highlight {
+                        color: var(--orange);
+                        font-family: 'Brier';
+                        mix-blend-mode: difference;
+                    }
+                }
+            }
+
+            .box-container {
+                height: 50vh;
+
+                .box {
+                    height: 200px;
+                    width: 350px;
+                    background-color: #000000;
+                    position: relative;
+                    border-top: 0;
+                    border-right: 0;
+
+                    .text-box {
+                        overflow: hidden;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+
+                        .texts {
+                            transform: translateY(57%);
+
+                            p {
+                                font-size: 2.3rem;
+                                color: var(--white);
+                                text-transform: uppercase;
+                                line-height: 1.5;
+
+                                &:not(:last-child) {
+                                    margin-bottom: 20px;
+                                }
+                            }
                         }
                     }
                 }
@@ -841,23 +503,9 @@
     }
 
 
-    #parcours {
-
-        .container {
-
-            .title {
-
-                p {
-                    font-size: 9.5rem;
-                    line-height: 1;
-                }
-            }
-        }
-    }
-
-
-
     #hero-projects {
+        padding-bottom: 200px;
+
         .container {
             .title {
                 display: block;
@@ -876,265 +524,621 @@
                         color: var(--red);
                         font-weight: 800;
                         line-height: 25vh;
-                        position: static;
+                        display: inline-block;
+                        top: 0;
+                        position: absolute;
+
+                        &:not(.not) {
+                            left: 0;
+                        }
                     }
-                }
-            }
-        }
-    }
 
-    #projects {
-
-        .container .projects-list .project {
-            flex-flow: column;
-
-            .thumbnail {
-                width: 100%;
-            }
-
-            .texts-block {
-
-                .title {
-                    margin-bottom: 50px;
-
-                    &::before {
-                        height: 1.2rem;
+                    &.box1 span {
+                        left: 18%;
                     }
-                }
-            }
-        }
-    }
-}
 
+                    &.box4 span {
+                        left: 10%;
+                    }
 
-@include mq(xs) {
-
-    #hero {
-        .container {
-            .h1 {
-
-                span {
-                    font-size: 12vh;
-                    line-height: 11.8vh;
-                }
-            }
-        }
-    }
-
-    #qui {
-
-        .container {
-
-            .texts {
-
-                .box {
-                    background-color: black;
-                    line-height: .75;
-                    font-size: 19vw;
-                    font-weight: 800;
-                    color: var(--orange-light);
-                    white-space: nowrap;
-                    background-color: black;
-                }
-
-            }
-        }
-    }
-
-    #presentation {
-
-        .container {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            position: relative;
-            transform: translateY(-60px) !important;
-
-            p {
-                color: var(--light);
-                font-size: 6rem;
-                text-align: center;
-                font-weight: 700;
-                line-height: 95%;
-                letter-spacing: -5.4px;
-            }
-        }
-    }
-
-    #MyDigitalSchool {
-        .container {
-            .title {
-
-                span {
-                    font-size: 38vw;
-                }
-            }
-
-            .mainText .texts .textbox {
-
-                span {
-                    font-size: 4.6rem;
-                }
-            }
-        }
-    }
-
-
-    #parcours {
-        .container {
-
-            .title {
-                .circle {
-                    width: 100%;
-                    left: 50%;
-                    transform: translate(-50%, 80%);
-                }
-
-                p {
-                    font-size: 7rem;
-                    line-height: 1;
-                }
-            }
-        }
-    }
-
-    #hero-projects {
-        .container {
-            .title {
-                display: block;
-                height: 60vh;
-
-                .box {
-                    overflow: hidden;
-                    height: fit-content;
-                    width: 100%;
-                    height: 15vh;
-                    position: relative;
-
-                    span {
-                        font-size: 15vh;
-                        text-transform: uppercase;
-                        color: var(--red);
-                        font-weight: 800;
-                        line-height: 15vh;
+                    &.box3 span.not {
+                        right: 0px !important;
                     }
                 }
             }
 
             .bottom {
                 display: flex;
-                flex-flow: column;
-                align-items: start;
-                gap: 3rem;
+                align-items: center;
+                gap: 10rem;
+                margin: 150px 0 60px;
 
+                .card {
+                    p.categorie {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        gap: 10px;
+                        color: var(--orange-light);
+                        font-weight: 600;
+                        margin-bottom: 10px;
+
+                        &::before {
+                            content: '';
+                            width: 5px;
+                            height: 5px;
+                            background-color: var(--orange-light);
+                        }
+                    }
+
+                    p.infos {
+                        font-size: 2.4rem;
+                        color: var(--light);
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        width: fit-content;
+
+                        &::after {
+                            content: '';
+                            height: 2px;
+                            width: 100%;
+                            background-color: var(--light);
+                            display: block;
+                            margin-top: 6px;
+                        }
+                    }
+                }
             }
         }
     }
-}
 
 
-@include mq(xxs) {
+    #projects {
+        padding-bottom: 400px;
 
-    #hero {
         .container {
-            .h1 {
+            max-width: 1450px;
+            margin-inline: auto;
+            position: relative;
 
-                span {
-                    font-size: 5.5vh;
-                    line-height: 6vh;
-                    white-space: nowrap;
+            .projects-list {
+                position: relative;
+
+                .project {
+                    position: sticky;
+                    display: flex;
+                    gap: 15px;
+                    padding: 25px 0;
+                    border-top: 1px solid var(--white);
+                    border-bottom: 1px solid var(--white);
+                    background-color: black;
+
+                    --index0: calc(var(--index) - 1);
+
+                    top: calc(60px * var(--index0));
+                    z-index: calc(var(--index0) + 1);
+
+                    .thumbnail {
+                        width: 50%;
+                        flex-shrink: 0;
+
+                        .image {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .texts-block {
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-between;
+                        font-size: 1.8rem;
+                        line-height: 2.7rem;
+
+                        .title {
+                            text-transform: uppercase;
+                            display: flex;
+                            gap: 15px;
+                            align-items: center;
+                            font-size: 1.5rem;
+                            line-height: 1.5rem;
+                            width: 100%;
+                            position: relative;
+
+                            &::before {
+                                content: '';
+                                height: 60%;
+                                aspect-ratio: 1/1;
+                                background-color: var(--white);
+                                display: block;
+                            }
+
+                            a {
+                                position: absolute;
+                                right: 0;
+                                transform: rotate(-45deg);
+                            }
+                        }
+
+                        .bottom {
+                            &>*:not(:last-child) {
+                                border-bottom: 1px solid grey;
+                                display: block;
+                            }
+
+                            .description {
+                                padding-bottom: 20px;
+
+                                p {
+                                    width: 90%;
+                                }
+                            }
+
+                            .type,
+                            .technology {
+                                padding: 12px 0;
+                                display: flex;
+                                justify-content: space-between;
+                                text-transform: uppercase;
+                                font-size: 1.5rem;
+                                line-height: 1.5rem;
+
+                                span {
+                                    width: 40%;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+    @include mq(md) {
+
+        #MyDigitalSchool {
+            .container {
+                .title {
+
+                    span {
+                        font-size: 30vw;
+                    }
+                }
+
+                .secondText {
+
+                    p {
+                        font-size: 4rem;
+                        line-height: 120%;
+
+                        span {
+                            width: 300px;
+                            height: 1px;
+
+                            &:first-child {
+                                height: 4.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #hero-projects {
+            .container {
+                .title {
+                    height: 70vh;
+
+                    .box {
+                        height: 15vh;
+
+                        span {
+                            font-size: 15vh;
+                            line-height: 15vh;
+
+                            &:not(.not) {
+                                left: 0;
+                            }
+                        }
+
+                        &.box1 span {
+                            left: 18%;
+                        }
+
+                        &.box4 span {
+                            left: 10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include mq(sm) {
+
+        #hero {
+            .container {
+                padding-top: 100px;
+
+                .h1 {
+
+                    span {
+                        font-size: 17vh;
+                        line-height: 15vh;
+                    }
+
+                    .texts {
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #presentation {
+            content-visibility: visible;
+
+            .container {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                position: relative;
+                transform: translateY(-60px) !important;
+
+                p {
+                    color: var(--light);
+                    font-size: 10rem;
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 88%;
+                    letter-spacing: -5.4px;
+                }
+            }
+        }
+
+        #MyDigitalSchool {
+            .container {
+                .title {
+
+                    span {
+                        font-size: 38vw;
+                    }
+                }
+
+                .mainText .texts .textbox {
+
+                    span {
+                        font-size: 5.8rem;
+                    }
+                }
+
+                .secondText {
+
+                    p {
+                        font-size: 3rem;
+                        line-height: 120%;
+
+                        span {
+                            width: 200px;
+                            height: 1px;
+
+                            &:first-child {
+                                height: 4.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        #parcours {
+
+            .container {
+
+                .title {
+
+                    p {
+                        font-size: 9.5rem;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+
+
+        #hero-projects {
+            .container {
+                .title {
+                    display: block;
+                    height: 100vh;
+
+                    .box {
+                        overflow: hidden;
+                        height: fit-content;
+                        width: 100%;
+                        height: 25vh;
+                        position: relative;
+
+                        span {
+                            font-size: 22vh;
+                            text-transform: uppercase;
+                            color: var(--red);
+                            font-weight: 800;
+                            line-height: 25vh;
+                            position: static;
+                        }
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+            .container .projects-list .project {
+                flex-flow: column;
+
+                .thumbnail {
+                    width: 100%;
+                }
+
+                .texts-block {
+
+                    .title {
+                        margin-bottom: 50px;
+
+                        &::before {
+                            height: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include mq(xs) {
+
+        #hero {
+            .container {
+                .h1 {
+
+                    span {
+                        font-size: 12vh;
+                        line-height: 11.8vh;
+                    }
+                }
+            }
+        }
+
+        #qui {
+
+            .container {
 
                 .texts {
 
-                    p {
-                        display: none;
+                    .box {
+                        background-color: black;
+                        line-height: .75;
+                        font-size: 19vw;
+                        font-weight: 800;
+                        color: var(--orange-light);
+                        white-space: nowrap;
+                        background-color: black;
                     }
+
                 }
             }
         }
-    }
 
-    #presentation {
+        #presentation {
 
-        .container {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            position: relative;
-            transform: translateY(-60px) !important;
-
-            p {
-                color: var(--light);
-                font-size: 4rem;
-                text-align: center;
-                font-weight: 700;
-                line-height: 100%;
-                letter-spacing: 0px;
-
-                span.margin {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-
-    #MyDigitalSchool {
-        .container {
-
-            .mainText .texts .textbox {
-
-                gap: 5px;
-
-                div {
-                    gap: 5px;
-                }
-
-                span {
-                    font-size: 2.4rem;
-                    line-height: 1.2;
-                }
-            }
-        }
-    }
-
-    #parcours {
-
-        .container {
-
-            .title {
+            .container {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                position: relative;
+                transform: translateY(-60px) !important;
 
                 p {
-                    font-size: 4rem;
-                    line-height: 1;
+                    color: var(--light);
+                    font-size: 6rem;
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 95%;
+                    letter-spacing: -5.4px;
+                }
+            }
+        }
+
+        #MyDigitalSchool {
+            .container {
+                .title {
+
+                    span {
+                        font-size: 38vw;
+                    }
+                }
+
+                .mainText .texts .textbox {
+
+                    span {
+                        font-size: 4.6rem;
+                    }
+                }
+            }
+        }
+
+
+        #parcours {
+            .container {
+
+                .title {
+                    .circle {
+                        width: 100%;
+                        left: 50%;
+                        transform: translate(-50%, 80%);
+                    }
+
+                    p {
+                        font-size: 7rem;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        #hero-projects {
+            .container {
+                .title {
+                    display: block;
+                    height: 60vh;
+
+                    .box {
+                        overflow: hidden;
+                        height: fit-content;
+                        width: 100%;
+                        height: 15vh;
+                        position: relative;
+
+                        span {
+                            font-size: 15vh;
+                            text-transform: uppercase;
+                            color: var(--red);
+                            font-weight: 800;
+                            line-height: 15vh;
+                        }
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: start;
+                    gap: 3rem;
+
                 }
             }
         }
     }
 
-    #hero-projects {
-        .container {
-            .title {
-                display: block;
-                height: 40vh;
 
-                .box {
-                    overflow: hidden;
-                    height: fit-content;
-                    width: 100%;
-                    height: 10vh;
-                    position: relative;
+    @include mq(xxs) {
+
+        #hero {
+            .container {
+                .h1 {
 
                     span {
-                        font-size: 10vh;
-                        text-transform: uppercase;
-                        color: var(--red);
-                        font-weight: 800;
-                        line-height: 10vh;
+                        font-size: 5.5vh;
+                        line-height: 6vh;
+                        white-space: nowrap;
+                    }
+
+                    .texts {
+
+                        p {
+                            display: none;
+                        }
                     }
                 }
             }
+        }
 
+        #presentation {
+
+            .container {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                position: relative;
+                transform: translateY(-60px) !important;
+
+                p {
+                    color: var(--light);
+                    font-size: 4rem;
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+
+                    span.margin {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        #MyDigitalSchool {
+            .container {
+
+                .mainText .texts .textbox {
+
+                    gap: 5px;
+
+                    div {
+                        gap: 5px;
+                    }
+
+                    span {
+                        font-size: 2.4rem;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+
+        #parcours {
+
+            .container {
+
+                .title {
+
+                    p {
+                        font-size: 4rem;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        #hero-projects {
+            .container {
+                .title {
+                    display: block;
+                    height: 40vh;
+
+                    .box {
+                        overflow: hidden;
+                        height: fit-content;
+                        width: 100%;
+                        height: 10vh;
+                        position: relative;
+
+                        span {
+                            font-size: 10vh;
+                            text-transform: uppercase;
+                            color: var(--red);
+                            font-weight: 800;
+                            line-height: 10vh;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

@@ -5,6 +5,7 @@
 @use 'components/header';
 @use 'components/footer';
 @use 'pages/home';
+@use 'pages/rave';
 
 
 
@@ -106,6 +107,7 @@ section {
     font-size: 24.5vh;
     font-weight: 900;
     color: var(--orange);
+    text-transform: uppercase;
 }
 
 
