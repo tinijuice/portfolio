@@ -7,13 +7,14 @@ function initGSAP() {
     myDigitalSchool()
     parcours()
     heroProjects()
+    projectSummary()
 }
 
 
 function textQuiSuiJe() {
 
-    if(!document.querySelector('#qui')) return
-    
+    if (!document.querySelector('#qui')) return
+
     const text1 = document.querySelector('#qui .text1');
     const text2 = document.querySelector('#qui .text2');
     const textMain = document.querySelector('#qui p');
@@ -43,7 +44,7 @@ function textQuiSuiJe() {
 function presentation() {
     const presentation = document.querySelector('#presentation')
 
-    if(!presentation) return
+    if (!presentation) return
 
     const container = presentation.querySelector('.container')
     const texts = presentation.querySelectorAll('p')
@@ -111,7 +112,7 @@ function presentation() {
 function myDigitalSchool() {
     const mds = document.querySelector('#MyDigitalSchool');
 
-    if(!mds) return
+    if (!mds) return
 
     const textBox = mds.querySelector('.mainText');
     const texts = mds.querySelectorAll('.mainText span');
@@ -150,7 +151,7 @@ function parcours() {
 
     const parcours = document.querySelector('#parcours')
 
-    if(!parcours) return
+    if (!parcours) return
 
     const box = parcours.querySelector('.box-container')
     const text = parcours.querySelector('.texts')
@@ -186,7 +187,7 @@ function parcours() {
 function heroProjects() {
     const heroProjects = document.querySelector('#hero-projects')
 
-    if(!heroProjects) return
+    if (!heroProjects) return
 
     const title = heroProjects.querySelector('.title')
     const spans = title.querySelectorAll('span:not(.not, .not2)')
@@ -233,6 +234,50 @@ function heroProjects() {
         duration: duration2,
     }, duration1)
 }
+
+
+
+function projectSummary() {
+
+    const projectSummary = document.querySelectorAll('.project-summary')
+
+    if (!projectSummary) return
+
+    projectSummary.forEach(ps => {
+        const content = ps.querySelector('.content')
+        const categorie = ps.querySelector('.categorie span')
+        const texts = ps.querySelectorAll('.infos p span')
+
+        gsap.from(categorie, {
+            x: '-100%',
+            scrollTrigger: {
+                trigger: content,
+                start: "top center",
+                end: "top top",
+                toggleActions: 'play none none none',
+                markers: false,
+            }
+        })
+
+        gsap.from(texts, {
+            y: '100%',
+            opacity: 0,
+            color: 'var(--orange)',
+            stagger: .05,
+            scrollTrigger: {
+                trigger: content,
+                start: "top center",
+                end: "top top",
+                toggleActions: 'play none none none',
+                markers: false,
+            }
+        })
+    });
+}
+
+
+
+
 
 
 

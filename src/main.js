@@ -60,6 +60,10 @@ function glitchedText(element, maxStep = 3, delay = 100, duration = 150) {
     const letters = "abcdefghijklmnopqrstuvwxyz";
 
     const original = element.dataset.text;
+    const originalWidth= element.getBoundingClientRect().width
+
+    element.style.width = originalWidth + 'px'
+    
     if (!original) return;
 
     const chars = original.split('');

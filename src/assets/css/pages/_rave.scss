@@ -70,14 +70,15 @@ main#rave {
     }
 
 
-    #context {
+    .project-summary {
         margin: 200px 0;
 
         .container {
 
             .title {
                 width: 100%;
-                text-align: right;
+                display: flex;
+                justify-content: end;
 
                 span {
                     font-size: 16rem;
@@ -90,6 +91,99 @@ main#rave {
                         transform: translateY(-10px);
                     }
                 }
+
+                .mainText {
+                    margin: 0 80px;
+                }
+            }
+
+
+            .content {
+                margin-top: 90px;
+                display: flex;
+
+                .card {
+                    width: 60%;
+
+                    .categorie {
+                        overflow: hidden;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        color: var(--orange-light);
+                        font-weight: 600;
+                        margin-bottom: 10px;
+
+                        span {
+                            width: fit-content;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            &::before {
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                background-color: var(--orange-light);
+                            }
+
+                        }
+                    }
+
+                    .infos {
+                        font-size: 2.8rem;
+                        color: var(--white);
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        width: 100%;
+                        line-height: 1.2;
+
+                        p {
+                            overflow: hidden;
+
+                            &:not(.not) {
+                                margin-bottom: 10px;
+                            }
+
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #objectifs {
+
+        .container {
+
+            .title {
+                justify-content: start;
+            }
+
+            .content {
+                justify-content: end;
+            }
+        }
+    }
+
+    #actions {
+
+        .container {
+
+            .title:first-child {
+                justify-content: start;
+                margin-bottom: 60px;
+            }
+
+            .title:last-child {
+                justify-content: end;
+            }
+
+            .content {
+                justify-content: center;
+                width: 100%;
             }
         }
     }
@@ -125,6 +219,55 @@ main#rave {
                 }
             }
         }
+
+        .project-summary {
+
+            .container {
+
+                .title {
+
+                    span {
+                        font-size: 10rem;
+
+                        &:not(:nth-child(2)) {
+                            display: inline-block;
+                            transform: translateY(-8px);
+                        }
+                    }
+
+                    .mainText {
+                        margin: 0 60px;
+                    }
+                }
+
+                .content {
+
+                    .card {
+
+                        .categorie {
+                            font-size: 1.2rem;
+                            margin-bottom: 10px;
+                        }
+
+                        .infos {
+                            font-size: 2.4rem;
+
+                            p {
+
+                                &:not(.not) {
+                                    margin-bottom: 10px;
+                                    white-space: nowrap;
+                                }
+
+                                span {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @include mq(xs) {
@@ -143,6 +286,44 @@ main#rave {
                     span {
                         font-size: 15rem;
                         line-height: 15rem;
+                    }
+                }
+            }
+        }
+
+        .project-summary {
+
+            .container {
+
+                .title {
+
+                    span {
+                        font-size: 6rem;
+
+                        &:not(:nth-child(2)) {
+                            display: inline-block;
+                            transform: translateY(-4px);
+                        }
+                    }
+
+                    .mainText {
+                        margin: 0 40px;
+                    }
+                }
+
+                .content {
+
+                    .card {
+                        width: 100%;
+
+                        .categorie {
+                            font-size: 1rem;
+                            margin-bottom: 10px;
+                        }
+
+                        .infos {
+                            font-size: 2rem;
+                        }
                     }
                 }
             }
@@ -169,6 +350,64 @@ main#rave {
                         font-size: 8rem;
                         line-height: 8rem;
                     }
+                }
+            }
+        }
+
+        .project-summary {
+
+            .container {
+
+                .title {
+
+                    span {
+                        font-size: 4rem;
+
+                        &:not(:nth-child(2)) {
+                            display: inline-block;
+                            transform: translateY(-4px);
+                        }
+                    }
+
+                    .mainText {
+                        margin: 0 30px;
+                    }
+                }
+
+                .content {
+
+                    .card {
+                        width: 100%;
+
+                        .categorie {
+                            font-size: 1rem;
+                            margin-bottom: 10px;
+                        }
+
+                        .infos {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #actions {
+
+            .container {
+
+                .title:first-child {
+                    justify-content: start;
+                    margin-bottom: 30px;
+                }
+
+                .title:last-child {
+                    justify-content: end;
+                }
+
+                .content {
+                    justify-content: center;
+                    width: 100%;
                 }
             }
         }
