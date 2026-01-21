@@ -146,29 +146,25 @@ footer {
     }
 }
 
+@include mq(xs) {
 
-@include mq(sm) {
-    header {
-        padding: 1.5rem 5rem;
-        background-color: var(--purple);
-        justify-content: start;
-        align-items: center;
+    footer {
+        .container {
+            flex-flow: column;
+            gap: 50px;
 
-        nav {
-            display: none;
+            .left,
+            .right {
+                width: 100%;
+            }
         }
-
-        .logo {
-            width: 70px;
-        }
-
-        .hbg {
-            display: block;
-        }
-
-
     }
+}
 
+@include mq(xxs) {
 
-
+    footer {
+        .container {
+        }
+    }
 }
