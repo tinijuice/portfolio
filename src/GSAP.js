@@ -262,7 +262,7 @@ function projectSummary() {
         gsap.from(texts, {
             y: '100%',
             opacity: 0,
-            color: 'var(--orange)',
+            color: 'var(--light)',
             stagger: .05,
             scrollTrigger: {
                 trigger: content,

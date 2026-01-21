@@ -3,26 +3,26 @@
 export const projects = [
     {
         "title": "Rave",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem mollitia fugiat quod tempore adipisci, nam nihil consequuntur consequatur repudiandae possimus. Laborum fuga magnam tempore nobis fugiat quo maiores aperiam.",
-        "type": "Developpement Web",
-        "technology": "Javascript & PHP",
-        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s",
+        "description": "Refonte complète du site Rave, incluant le design et le développement. Mise en place d’un système de filtres et de favoris afin d’améliorer l’expérience utilisateur et la navigation.",
+        "type": "Maquettage & développement web",
+        "technology": "PHP & SQL",
+        "thumbnail": "/portfolio/src/assets/img/rave-thumbnail.jpg",
         "link": "/portfolio/rave"
     },
     {
-        "title": "Rave",
+        "title": "Exemple",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem mollitia fugiat quod tempore adipisci, nam nihil consequuntur consequatur repudiandae possimus. Laborum fuga magnam tempore nobis fugiat quo maiores aperiam.",
-        "type": "Developpement Web",
-        "technology": "Javascript & PHP",
-        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s",
-        "link": "/portfolio/rave"
+        "type": "XXX",
+        "technology": "XXX & XXX",
+        "thumbnail": "/portfolio/src/assets/img/placeholder.png",
+        "link": ""
     },
     {
-        "title": "Rave",
+        "title": "Exemple",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem mollitia fugiat quod tempore adipisci, nam nihil consequuntur consequatur repudiandae possimus. Laborum fuga magnam tempore nobis fugiat quo maiores aperiam.",
-        "type": "Developpement Web",
-        "technology": "Javascript & PHP",
-        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s",
-        "link": "/portfolio/rave"
+        "type": "XXX",
+        "technology": "XXX & XXX",
+        "thumbnail": "/portfolio/src/assets/img/placeholder.png",
+        "link": ""
     },
 ]

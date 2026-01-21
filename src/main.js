@@ -28,6 +28,13 @@ async function setProjects() {
     if(!display) return
     display.style = '--numcards: ' + projects.length
 
+    // Vérifie le nombre de projets pour l'orthographier
+    let text = ' projet'
+    if(projects.length > 1) text = ' projets'
+
+    // Set le nombre de projet(s)
+    document.querySelector('.nb-projects').textContent = projects.length + text
+
     projects.forEach((project, index) => {
 
         const template = document.getElementById('projectTemplate').content.cloneNode(true)
@@ -63,7 +70,7 @@ function glitchedText(element, maxStep = 3, delay = 100, duration = 150) {
     const originalWidth= element.getBoundingClientRect().width
 
     element.style.width = originalWidth + 'px'
-    
+
     if (!original) return;
 
     const chars = original.split('');
