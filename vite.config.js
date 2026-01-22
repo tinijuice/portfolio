@@ -4,6 +4,7 @@ import { ViteEjsPlugin } from "vite-plugin-ejs";
 import htmlPurge from 'vite-plugin-purgecss';
 import mqpacker from 'mqpacker';
 import autoprefixer from 'autoprefixer';
+import {viteStaticCopy} from 'vite-plugin-static-copy';
 
 export default defineConfig({
   base: '/portfolio/',
@@ -71,3 +72,8 @@ export default defineConfig({
     htmlPurge()
   ],
 });
+viteStaticCopy({
+  target: [
+    {src: 'public/assets/img', dest: 'assets/img/'}
+  ]
+})

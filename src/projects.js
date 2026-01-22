@@ -22,7 +22,7 @@ export const projects = [
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem mollitia fugiat quod tempore adipisci, nam nihil consequuntur consequatur repudiandae possimus. Laborum fuga magnam tempore nobis fugiat quo maiores aperiam.",
         "type": "XXX",
         "technology": "XXX & XXX",
-        "thumbnail": "/portfolio/src/assets/img/placeholder.png",
+        "thumbnail": "assets/img/placeholder.png",
         "link": ""
     },
 ]
