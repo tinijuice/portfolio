@@ -21,6 +21,7 @@
 :root {
     --white: #eaeaea;
     --black: #000000;
+    --bg: #000000;
 
     --orange: #FF4400;
     --orange-light: #FFB261;
@@ -79,7 +80,7 @@ html {
 
 body {
     font-family: 'Avantt';
-    background-color: black;
+    background-color: var(--bg);
     color: white;
     overflow-x: hidden;
 }
@@ -112,6 +113,7 @@ a {
 
 section {
     position: relative;
+    background-color: var(--bg);
 }
 
 

@@ -169,9 +169,7 @@ main#rave {
     }
 
     #actions {
-
         .container {
-
             .title:first-child {
                 justify-content: start;
                 margin-bottom: 60px;
@@ -186,6 +184,24 @@ main#rave {
                 width: 100%;
             }
         }
+    }
+
+    #section-box {
+        position: relative;
+
+        #actions,
+        #process {
+            position: sticky;
+            top: 20px;
+
+            --index0: calc(var(--index) - 1);
+            z-index: calc(var(--index0) + 1);
+        }
+    }
+
+    #process {
+        height: 100vh;
+        background-color: var(--bg);
     }
 
 

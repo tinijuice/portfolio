@@ -8,6 +8,7 @@ function initGSAP() {
     parcours()
     heroProjects()
     projectSummary()
+    actions()
 }
 
 
@@ -252,7 +253,7 @@ function projectSummary() {
             x: '-100%',
             scrollTrigger: {
                 trigger: content,
-                start: "top center",
+                start: "top 70%",
                 end: "top top",
                 toggleActions: 'play none none none',
                 markers: false,
@@ -266,13 +267,35 @@ function projectSummary() {
             stagger: .05,
             scrollTrigger: {
                 trigger: content,
-                start: "top center",
+                start: "top 70%",
                 end: "top top",
                 toggleActions: 'play none none none',
                 markers: false,
             }
         })
     });
+}
+
+function actions() {
+
+
+    const container = document.getElementById('section-box')
+
+    if (!container) return
+
+    const actions = document.getElementById('actions')
+
+    gsap.to(actions, {
+        scale: .7,
+        opacity: .3,
+        scrollTrigger: {
+            trigger: container,
+            start: "-20px top",
+            end: "bottom bottom",
+            scrub: 1,
+            markers: false,
+        }
+    })
 }
 
 

@@ -64,7 +64,7 @@ setProjects()
 
 function glitchedText(element, maxStep = 3, delay = 100, duration = 150) {
 
-    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const letters = "abcdefghijklmnopqrstuvwxyz&#$%";
 
     const original = element.dataset.text;
     const originalWidth= element.getBoundingClientRect().width
@@ -112,7 +112,7 @@ let duration = 100
 
 setInterval(() => {
 
-    document.querySelectorAll('.glitched-text').forEach(el => glitchedText(el, maxStep, delay, duration));
+    document.querySelectorAll('.glitched-text:not(.not)').forEach(el => glitchedText(el, maxStep, delay, duration));
 }, 6000);
 
 
