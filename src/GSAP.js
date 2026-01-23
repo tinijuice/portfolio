@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
 
 
 function initGSAP() {
@@ -287,16 +288,19 @@ function actions() {
 
     gsap.to(actions, {
         scale: .7,
+        y: '100px',
         opacity: .3,
         scrollTrigger: {
             trigger: container,
             start: "-20px top",
-            end: "bottom bottom",
+            end: "120% bottom",
             scrub: 1,
             markers: false,
         }
     })
 }
+
+
 
 
 

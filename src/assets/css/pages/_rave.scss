@@ -287,14 +287,14 @@ main#rave {
                 width: 40%;
 
                 .labels{
-                    color: var(--white);
+                    width: 40%;
 
                     .tag{
                         font-size: 1.8rem;
+                        margin-bottom: 3rem;
                     }
                     
                     .label{
-                        margin-top: 5rem;
                         display: inline-block;
                         padding: .4rem 1rem;
                         border: .5px solid var(--white);
@@ -305,6 +305,7 @@ main#rave {
                         will-change: opacity;
                         margin-right: .5rem;
                         font-weight: 600;
+                        margin-bottom: .8rem;
 
                         &:hover{
                             opacity: 1;
