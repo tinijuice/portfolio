@@ -45,12 +45,12 @@ main#rave {
 
                 .card {
                     display: block;
-                    border-top: .5px solid var(--white);
+                    border-top: .5px solid #eaeaea70;
                     padding: 1.5rem 0;
                     display: flex;
 
                     &:last-child {
-                        border-bottom: .5px solid var(--white);
+                        border-bottom: .5px solid #eaeaea70;
                     }
 
                     &>* {
@@ -202,6 +202,118 @@ main#rave {
     #process {
         height: 100vh;
         background-color: var(--bg);
+        padding: 100px 0;
+
+        .container {
+            position: relative;
+            height: 100%;
+
+            .line-left-right {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 100%;
+                width: 70%;
+                border-left: 1px solid var(--white);
+                border-right: 1px solid var(--white);
+                opacity: .2;
+
+            }
+
+            .line-top-bottom {
+                z-index: -1;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 70%;
+                width: 100%;
+                border-top: 1px solid var(--white);
+                border-bottom: 1px solid var(--white);
+                opacity: .2;
+            }
+
+            .title {
+                display: flex;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
+
+                .box {
+                    display: flex;
+                    font-size: 18rem;
+                    gap: 5rem;
+                    padding-right: 30rem;
+                    animation: scrollX 10s linear infinite;
+                    text-transform: uppercase;
+                    font-family: 'Ppmondwest';
+                    word-spacing: 2rem;
+                }
+            }
+
+            @keyframes scrollX {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+
+            .content{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .block-text{
+                width: 50%;
+                
+                p{
+                    font-size: 2.4rem;
+                    line-height: 1.4;
+                    font-weight: 500;
+                    color: var(--white);
+
+                    &:first-child{
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+
+            .right{
+                width: 40%;
+
+                .labels{
+                    color: var(--white);
+
+                    .tag{
+                        font-size: 1.8rem;
+                    }
+                    
+                    .label{
+                        margin-top: 5rem;
+                        display: inline-block;
+                        padding: .4rem 1rem;
+                        border: .5px solid var(--white);
+                        font-size: 1.4rem;
+                        opacity: .5;
+                        user-select: none;
+                        transition: opacity 1s;
+                        will-change: opacity;
+                        margin-right: .5rem;
+                        font-weight: 600;
+
+                        &:hover{
+                            opacity: 1;
+                            transition: opacity .3s;
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
